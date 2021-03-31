@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottomSheetLayout"
+    android:layout_width="match_parent"
+    android:background="@drawable/ic_bottom_sheet_background"
+    android:padding="10dp"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="3dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_line_rectangle_black"
+        android:tint="#000000">
+    </ImageView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Pilih Customer Melalui :"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:textStyle="bold">
+    </TextView>
+
+    <LinearLayout
+        android:id="@+id/linier_search_customer_mobil"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tint="#000000"
+            android:src="@drawable/ic_baseline_directions_car_black_24">
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:layout_gravity="center_vertical"
+            android:text="Pilih Cutomer Mobil">
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linier_search_customer_motor"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tint="#000000"
+            android:src="@drawable/ic_baseline_motorcycle_black_24">
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:layout_gravity="center_vertical"
+            android:text="Pilih Cutomer Motor">
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linier_scan_vehicle_number"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tint="#000000"
+            android:src="@drawable/ic_baseline_camera_enhance_black_24">
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:layout_gravity="center_vertical"
+            android:text="Foto Nomor Kendaraan">
+        </TextView>
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

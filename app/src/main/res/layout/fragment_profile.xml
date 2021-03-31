@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutFragmentSalon"
+    android:layout_width="match_parent"
+    android:padding="15dp"
+    android:layout_height="match_parent"
+    tools:context=".NAVIGATION.TransactionFragment">
+
+
+    <ImageView
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:tint="#000000"
+        android:background="@drawable/car_wash_logo_black"
+        android:layout_height="wrap_content">
+    </ImageView>
+
+    <TextView
+        android:id="@+id/txtLTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:text="CarWash"
+        android:textColor="#000000"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/textSubtitle"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtLTitle"
+        android:textSize="15sp"
+        android:textColor="#000000"
+        android:text="Aplikasi Cuci Mobil dan Sepeda Motor" />
+
+    <Button
+        android:id="@+id/button_Logout"
+        android:layout_width="wrap_content"
+        android:backgroundTint="#000000"
+        android:text="Keluar Akun"
+        android:layout_marginTop="10dp"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        android:layout_below="@id/textSubtitle"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content">
+    </Button>
+
+</RelativeLayout>

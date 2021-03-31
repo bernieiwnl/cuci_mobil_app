@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView_customer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        app:cardCornerRadius="15dp"
+        app:cardPreventCornerOverlap="true">
+
+        <net.colindodd.gradientlayout.GradientRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minHeight="120dp"
+            app:start_color="@color/whiteBodyColor"
+            app:end_color="@color/whiteBodyColor"
+            app:orientation="LEFT_RIGHT"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/textView_namaPaket"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:text="Mobil Small">
+            </TextView>
+
+            <TextView
+                android:id="@+id/textView_hargaPaket"
+                android:layout_below="@id/textView_namaPaket"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="#000000"
+                android:text="Rp.70.0000">
+            </TextView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonMaterial_Hapus"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView_hargaPaket"
+                android:textAllCaps="false"
+                android:text="Hapus"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                app:strokeColor="#000000"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton">
+            </com.google.android.material.button.MaterialButton>
+
+
+            <ImageView
+                android:id="@+id/imageView_photoPaket"
+                android:layout_marginTop="5dp"
+                android:layout_width="105dp"
+                android:layout_height="75dp"
+                android:scaleType="centerCrop"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_customer_logo"/>
+
+
+
+        </net.colindodd.gradientlayout.GradientRelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MASTER.EditPackageActivity">
+
+    <RelativeLayout
+        android:id="@+id/title_background"
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageViewBack"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            app:tint="#000000"
+            app:srcCompat="@drawable/ic_baseline_arrow_back_white_24" />
+
+        <TextView
+            android:id="@+id/layout_title"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:text="Ubah Data Paket Pencucian"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:layout_height="wrap_content">
+        </TextView>
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_below="@+id/title_background"
+        android:layout_above="@+id/layout_footer"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/textView_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tambah data paket pencucian mobil atau motor"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="15sp">
+            </TextView>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textinput_nama"
+                android:layout_below="@+id/textView_content"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:hint="Nama Paket"
+                app:hintTextColor="#000000"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:boxBackgroundColor="@color/fui_transparent"
+                android:textColorHint="#000000"
+                app:startIconDrawable="@drawable/ic_baseline_sentiment_dissatisfied_24"
+                app:startIconTint="#000000"
+                app:boxStrokeColor="#000000"
+                app:endIconTint="#000000"
+                app:endIconMode="clear_text">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txt_nama_paket"
+                    android:layout_width="match_parent"
+                    android:textColor="#000000"
+                    android:inputType="text"
+                    android:textSize="13dp"
+                    android:layout_height="60dp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textinput_harga"
+                android:layout_below="@+id/textinput_nama"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:hint="Harga Paket"
+
+                app:hintTextColor="#000000"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:boxBackgroundColor="@color/fui_transparent"
+                android:textColorHint="#000000"
+                app:startIconDrawable="@drawable/ic_baseline_attach_money_black_24"
+                app:startIconTint="#000000"
+                app:boxStrokeColor="#000000"
+                app:endIconTint="#000000"
+                app:endIconMode="clear_text">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txt_harga_paket"
+                    android:layout_width="match_parent"
+                    android:textColor="#000000"
+                    android:inputType="number"
+                    android:textSize="13dp"
+                    android:layout_height="60dp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/textView_jenisKendaraan"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/textinput_harga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jenis Kendaraan"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="15sp">
+            </TextView>
+
+            <LinearLayout
+                android:id="@+id/linier_radio"
+                android:layout_below="@+id/textView_jenisKendaraan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <RadioGroup
+                        android:id="@+id/radioGroup_jenisKendaraan"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="left"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:id="@+id/radioButton_mobil"
+                            android:layout_width="wrap_content"
+                            android:text="Mobil"
+                            android:textSize="13dp"
+                            android:drawableTint="#000000"
+                            android:drawableLeft="@drawable/ic_baseline_directions_car_black_24"
+                            android:layout_height="wrap_content">
+                        </RadioButton>
+
+                        <RadioButton
+                            android:id="@+id/radioButton_motor"
+                            android:layout_marginLeft="10dp"
+                            android:drawableLeft="@drawable/ic_baseline_motorcycle_black_24"
+                            android:layout_width="wrap_content"
+                            android:text="Motor"
+                            android:drawableTint="#000000"
+                            android:textSize="13dp"
+                            android:layout_height="wrap_content">
+                        </RadioButton>
+
+                    </RadioGroup>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textinput_keterangan"
+                android:layout_below="@+id/linier_radio"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:hint="Informasi Paket"
+                app:hintTextColor="#000000"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:boxBackgroundColor="@color/fui_transparent"
+                android:textColorHint="#000000"
+                app:startIconTint="#000000"
+                app:boxStrokeColor="#000000"
+                app:endIconTint="#000000"
+                app:endIconMode="clear_text">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txt_informasi_paket"
+                    android:layout_width="match_parent"
+                    android:textColor="#000000"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine"
+                    android:textSize="13dp"
+                    android:layout_height="150dp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView_tambahFoto"
+                android:layout_below="@+id/textinput_keterangan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="15dp"
+                app:cardPreventCornerOverlap="true"
+                android:layout_marginTop="10dp">
+
+                <net.colindodd.gradientlayout.GradientRelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:start_color="@color/gradientLightBlue"
+                    app:end_color="@color/gradientOrange"
+                    app:orientation="LEFT_RIGHT"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:text="Tambahkan foto disini"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/imageView_namaCustomer"
+                        android:layout_marginLeft="5dp"
+                        android:layout_width="wrap_content"
+                        android:textStyle="bold"
+                        android:textColor="@color/whiteBodyColor"
+                        android:textSize="14sp"
+                        android:layout_height="wrap_content"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/buttonMaterial_tambahFoto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:textAllCaps="false"
+                        android:text="Tambah Foto"
+                        android:textStyle="bold"
+                        android:textColor="@color/whiteBodyColor"
+                        android:textSize="12sp"
+                        app:strokeColor="@color/whiteBodyColor"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton">
+                    </com.google.android.material.button.MaterialButton>
+                </net.colindodd.gradientlayout.GradientRelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="10dp"
+                android:id="@+id/recycler_packagePhoto"
+                android:layout_below="@+id/cardView_tambahFoto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView_simpanData"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="15dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="25dp"
+        app:cardPreventCornerOverlap="true">
+
+        <net.colindodd.gradientlayout.GradientRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:start_color="@color/gradientLightOrange"
+            app:end_color="@color/gradientOrange"
+            app:orientation="LEFT_RIGHT"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/textView_lanjutkan"
+                android:text="Simpan Data Paket Pencucian"
+                android:layout_toRightOf="@id/imageView_namaCustomer"
+                android:layout_width="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@color/whiteBodyColor"
+                android:textSize="16sp"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_baseline_arrow_right__black_24"
+                android:tint="@color/whiteBodyColor"></ImageView>
+
+        </net.colindodd.gradientlayout.GradientRelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

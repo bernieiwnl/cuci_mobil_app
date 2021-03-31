@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MASTER.InsertCustomerActivity">
+
+    <RelativeLayout
+        android:id="@+id/title_background"
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageViewBack"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            app:tint="#000000"
+            app:srcCompat="@drawable/ic_baseline_arrow_back_white_24" />
+
+        <TextView
+            android:id="@+id/layout_title"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:text="Tambah Data Customer"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:layout_height="wrap_content">
+        </TextView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_above="@+id/cardView_simpanData"
+        android:layout_below="@id/title_background"
+        android:background="@drawable/ic_title_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scrollViewInsert"
+            android:layout_width="match_parent"
+            android:background="@drawable/ic_title_background"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imageView_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_empty_profile_image"></androidx.appcompat.widget.AppCompatImageView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView_tambahFoto"
+                    android:layout_below="@+id/textinput_keterangan"
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="15dp"
+                    app:cardPreventCornerOverlap="true"
+                    android:layout_marginTop="10dp">
+
+                    <net.colindodd.gradientlayout.GradientRelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:start_color="@color/gradientLightBlue"
+                        app:end_color="@color/gradientOrange"
+                        app:orientation="LEFT_RIGHT"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:text="Tambahkan foto profile disini"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@id/imageView_namaCustomer"
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="wrap_content"
+                            android:textStyle="bold"
+                            android:textColor="@color/whiteBodyColor"
+                            android:textSize="14sp"
+                            android:layout_height="wrap_content"/>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/buttonMaterial_tambahFoto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:textAllCaps="false"
+                            android:text="Tambah Foto"
+                            android:textStyle="bold"
+                            android:textColor="@color/whiteBodyColor"
+                            android:textSize="12sp"
+                            app:strokeColor="@color/whiteBodyColor"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton">
+                        </com.google.android.material.button.MaterialButton>
+                    </net.colindodd.gradientlayout.GradientRelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:text="Inputkan Informasi Customer"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:textStyle="bold"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="25dp"
+                    android:text="Nama Customer"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:textStyle="bold"></TextView>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textinput_nama"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:hint="Nama Customer"
+                    app:hintTextColor="#000000"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    app:boxBackgroundColor="@color/fui_transparent"
+                    android:textColorHint="#000000"
+                    app:startIconDrawable="@drawable/ic_baseline_sentiment_dissatisfied_24"
+                    app:startIconTint="#000000"
+                    app:boxStrokeColor="#B00020"
+                    app:endIconTint="#000000"
+                    app:endIconMode="clear_text">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txt_nama_customer"
+                        android:layout_width="match_parent"
+                        android:textColor="#000000"
+                        android:inputType="text"
+                        android:textSize="13dp"
+                        android:layout_height="60dp"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="25dp"
+                    android:text="Email Customer"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:textStyle="bold"></TextView>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textinput_email"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:hint="Email Customer"
+                    app:hintTextColor="#000000"
+                    app:boxBackgroundColor="@color/fui_transparent"
+                    android:textColorHint="#000000"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    app:startIconDrawable="@drawable/ic_baseline_email_24"
+                    app:startIconTint="#000000"
+                    app:boxStrokeColor="#B00020"
+                    app:endIconTint="#000000"
+                    app:endIconMode="clear_text">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txt_email_customer"
+                        android:layout_width="match_parent"
+                        android:textColor="#000000"
+                        android:textSize="13dp"
+                        android:inputType="textEmailAddress"
+                        android:layout_height="60dp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="25dp"
+                    android:text="Nomor Kendaraan"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:textStyle="bold"></TextView>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textinput_platnomor"
+                    android:layout_height="wrap_content"
+                    android:layout_width="200dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:hint="Nomor Kendaraan"
+                    app:hintTextColor="#000000"
+                    app:boxBackgroundColor="@color/fui_transparent"
+                    android:textColorHint="#000000"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    app:startIconDrawable="@drawable/ic_baseline_label_24"
+                    app:startIconTint="#000000"
+                    app:boxStrokeColor="#B00020"
+                    app:endIconTint="#000000"
+                    app:endIconMode="clear_text">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txt_plat_nomor"
+                        android:layout_width="match_parent"
+                        android:textColor="#000000"
+                        android:textSize="13dp"
+                        android:inputType="text"
+                        android:layout_height="60dp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="25dp"
+                    android:text="Jenis Kendaraan"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:textStyle="bold"></TextView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp">
+                        <RadioGroup
+                            android:id="@+id/radioGroup_jenisKendaraan"
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:gravity="left"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/radioButton_mobil"
+                                android:layout_width="wrap_content"
+                                android:text="Mobil"
+                                android:textSize="13dp"
+                                android:drawableLeft="@drawable/ic_baseline_directions_car_black_24"
+                                android:layout_height="wrap_content">
+                            </RadioButton>
+
+                            <RadioButton
+                                android:id="@+id/radioButton_motor"
+                                android:layout_marginLeft="10dp"
+                                android:drawableLeft="@drawable/ic_baseline_motorcycle_black_24"
+                                android:layout_width="wrap_content"
+                                android:text="Motor"
+                                android:textSize="13dp"
+                                android:layout_height="wrap_content">
+                            </RadioButton>
+
+                        </RadioGroup>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="25dp"
+                    android:text="Nomor Telepon"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:textStyle="bold"></TextView>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textinput_nomorTelepon"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:hint="Nomor Telepon"
+                    app:hintTextColor="#000000"
+                    app:boxBackgroundColor="@color/fui_transparent"
+                    android:textColorHint="#000000"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    app:startIconDrawable="@drawable/ic_baseline_local_phone_24"
+                    app:startIconTint="#000000"
+                    app:boxStrokeColor="#B00020"
+                    app:endIconTint="#000000"
+                    app:endIconMode="clear_text">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txt_nomor_telepon"
+                        android:layout_width="match_parent"
+                        android:textColor="#000000"
+                        android:textSize="13dp"
+                        android:inputType="phone"
+                        android:layout_height="60dp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="25dp"
+                    android:text="Alamat Lengkap"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:textStyle="bold"></TextView>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textinput_alamatLengkap"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:hint="Alamat Lengkap"
+                    app:hintTextColor="#000000"
+                    app:boxBackgroundColor="@color/fui_transparent"
+                    android:textColorHint="#000000"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    app:startIconDrawable="@drawable/ic_baseline_location_on_24"
+                    app:startIconTint="#000000"
+                    app:boxStrokeColor="#B00020"
+                    app:endIconTint="#000000"
+                    app:endIconMode="clear_text">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txt_alamat_lengkap"
+                        android:layout_width="match_parent"
+                        android:textColor="#000000"
+                        android:textSize="13dp"
+                        android:inputType="textMultiLine"
+                        android:layout_height="60dp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView_simpanData"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="25dp"
+        app:cardPreventCornerOverlap="true">
+
+        <net.colindodd.gradientlayout.GradientRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:start_color="@color/gradientLightOrange"
+            app:end_color="@color/gradientOrange"
+            app:orientation="LEFT_RIGHT"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/textView_lanjutkan"
+                android:text="Simpan Data Customer"
+                android:layout_toRightOf="@id/imageView_namaCustomer"
+                android:layout_width="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@color/whiteBodyColor"
+                android:textSize="16sp"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_baseline_arrow_right__black_24"
+                android:tint="@color/whiteBodyColor"></ImageView>
+
+        </net.colindodd.gradientlayout.GradientRelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>

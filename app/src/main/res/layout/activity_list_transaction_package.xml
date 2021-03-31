@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TRANSACTION.ListTransactionPackage">
+
+    <RelativeLayout
+        android:id="@+id/title_background"
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageViewBack"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            app:tint="#000000"
+            app:srcCompat="@drawable/ic_baseline_arrow_back_white_24" />
+
+        <TextView
+            android:id="@+id/layout_title"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:text="Data Transaksi Per Paket"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:layout_height="wrap_content">
+        </TextView>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageView_filter"
+            android:layout_alignParentEnd="true"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            app:tint="#000000"
+            app:srcCompat="@drawable/ic_baseline_filter_list_black_24" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_above="@+id/footer"
+        android:layout_below="@id/title_background"
+        android:background="@drawable/ic_title_background"
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_packageTransaction"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </androidx.recyclerview.widget.RecyclerView>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/ic_title_background"
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textView_totalTransaction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_title"
+            android:layout_centerVertical="true"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:text="Total Transaksi Per Paket :" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

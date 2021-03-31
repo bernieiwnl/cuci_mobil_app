@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_mobil"
+        android:icon="@drawable/ic_baseline_local_car_wash_24"
+        android:title="Cuci Mobil" />
+
+    <item
+        android:id="@+id/navigation_motor"
+        android:icon="@drawable/ic_baseline_motorcycle_24"
+        android:title="Cuci Motor" />
+
+    <item
+        android:id="@+id/placholder1"
+        android:title=""/>
+
+    <item
+        android:id="@+id/navigation_salon"
+        android:icon="@drawable/ic_baseline_list_24"
+        android:title="Transaksi" />
+
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/ic_baseline_emoji_emotions_24"
+        android:title="Profile" />
+
+</menu>

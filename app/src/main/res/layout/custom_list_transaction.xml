@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="5dp"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView_DataCustomer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="15dp"
+        app:cardPreventCornerOverlap="true">
+
+        <net.colindodd.gradientlayout.GradientRelativeLayout
+            android:id="@+id/gradient_relative"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minHeight="100dp"
+            app:start_color="@color/gradientLightGreen"
+            app:end_color="@color/gradientLightBlue"
+            app:orientation="LEFT_RIGHT"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/textView_namaCustomer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="#ffffff"
+                android:text="Agustian Suhartono" />
+
+            <ImageView
+                android:id="@+id/imageView_tanggalTransaksi"
+                android:layout_marginTop="2dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_toLeftOf="@id/textview_tanggalTransaksi"
+                android:src="@drawable/ic_baseline_date_range_black_24"
+                android:layout_marginRight="5dp"
+                android:tint="#ffffff">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/textview_tanggalTransaksi"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="2dp"
+                android:text="27 Januari 2012"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+
+            <ImageView
+                android:id="@+id/imageView_jenisKendaraan"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_below="@id/textView_namaCustomer"
+                android:src="@drawable/ic_baseline_directions_car_black_24"
+                android:layout_marginTop="5dp"
+                android:tint="#ffffff">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/textView_jenisKendaraan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView_namaCustomer"
+                android:layout_toRightOf="@id/imageView_jenisKendaraan"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:text="Mobil"
+                android:textColor="#ffffff"
+                android:textSize="14sp">
+            </TextView>
+
+            <TextView
+                android:id="@+id/textView_harga"
+                android:text="Total Transaksi Rp.40.000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:textSize="15sp"
+                android:textColor="#ffffff"
+                android:layout_below="@id/imageView_jenisKendaraan"/>
+
+        </net.colindodd.gradientlayout.GradientRelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>

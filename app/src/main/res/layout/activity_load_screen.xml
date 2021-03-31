@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UTAMA.LoadScreenActivity">
+
+    <RelativeLayout
+        android:id="@+id/layout1"
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:layout_height="wrap_content">
+
+        <com.agrawalsuneet.dotsloader.loaders.LazyLoader
+            android:layout_centerHorizontal="true"
+            android:id="@+id/lazyLoader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_marginTop="30dp"
+            app:lazyloader_animDur="800"
+            app:lazyloader_dotsDist="10dp"
+            app:lazyloader_dotsRadius="10dp"
+            app:lazyloader_firstDelayDur="150"
+            app:lazyloader_firstDotColor="#ff5c8d"
+            app:lazyloader_interpolator="@android:anim/decelerate_interpolator"
+            app:lazyloader_secondDelayDur="300"
+            app:lazyloader_secondDotColor="#76d275"
+            app:lazyloader_thirdDotColor="#f5fd67" />
+
+        <TextView
+            android:id="@+id/textView_textLoading"
+            android:layout_below="@+id/lazyLoader"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:text="Sedang Mencari Customer ..."
+            android:layout_height="wrap_content">
+        </TextView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout2"
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView_notFound"
+            android:layout_centerHorizontal="true"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/ic_customer_not_found">
+        </ImageView>
+
+
+        <TextView
+            android:id="@+id/textView_textLoading2"
+            android:layout_below="@+id/imageView_notFound"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:text="Customer Tidak Dapat Ditemukan"
+            android:layout_height="wrap_content">
+        </TextView>
+
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/button_getCustomer"
+        android:layout_below="@id/layout2"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:backgroundTint="#000000"
+        android:text="Cari Customer Disini"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        android:layout_height="wrap_content">
+    </Button>
+
+
+
+
+
+</RelativeLayout>

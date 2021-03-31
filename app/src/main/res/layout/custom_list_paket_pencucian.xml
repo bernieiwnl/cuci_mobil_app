@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:padding="10dp"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imageView_profile"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:scaleType="centerCrop"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/textView_namaPaket"
+        android:layout_width="match_parent"
+        android:layout_toLeftOf="@id/button_pilih"
+        android:layout_marginRight="5dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/imageView_profile"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="#000000"
+        android:text="Nama Paket">
+    </TextView>
+
+
+    <ImageView
+        android:id="@+id/imageView_jenisKendaraan"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_below="@id/textView_namaPaket"
+        android:layout_toRightOf="@id/imageView_profile"
+        android:src="@drawable/ic_baseline_directions_car_black_24"
+        android:layout_marginTop="3dp"
+        android:tint="#000000"
+        android:layout_marginLeft="10dp">
+    </ImageView>
+
+    <TextView
+        android:id="@+id/textView_jenisKendaraan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView_namaPaket"
+        android:layout_toRightOf="@id/imageView_jenisKendaraan"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="5dp"
+        android:text="Jenis Kendaraan"
+        android:textColor="#000000"
+        android:textSize="12sp">
+    </TextView>
+
+
+
+    <TextView
+        android:id="@+id/textView_harga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView_jenisKendaraan"
+        android:layout_toRightOf="@id/imageView_profile"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="10dp"
+        android:text="Harga Paket"
+        android:textColor="#000000"
+        android:textSize="12sp">
+    </TextView>
+
+    <Button
+        android:id="@+id/button_pilih"
+        android:layout_width="wrap_content"
+        android:backgroundTint="#000000"
+        android:text="Pilih"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_height="wrap_content">
+    </Button>
+
+
+
+
+</RelativeLayout>

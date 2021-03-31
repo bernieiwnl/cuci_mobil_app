@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "339354738497",
+    "firebase_url": "https://cucimobil-56bba.firebaseio.com",
+    "project_id": "cucimobil-56bba",
+    "storage_bucket": "cucimobil-56bba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:339354738497:android:300117c9eed6cb3d56cbc0",
+        "android_client_info": {
+          "package_name": "com.example.cucimobilapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "339354738497-mnbt7vomj2vrq32j7dbu5uc2m0t59ioo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.cucimobilapp",
+            "certificate_hash": "cac572a67087adc28aca833b6df7351716514af0"
+          }
+        },
+        {
+          "client_id": "339354738497-l18n4a7a6ueopc8kcunf05ej8ieqal73.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB731_uzBrNXA39uzNxLrPtGi7h6EroCoI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "339354738497-l18n4a7a6ueopc8kcunf05ej8ieqal73.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
